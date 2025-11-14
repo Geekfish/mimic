@@ -133,7 +133,7 @@ defmodule Mimic.Module do
           nil ->
             nil
 
-          struct_info ->
+          struct_info when is_list(struct_info) ->
             struct_template = Map.from_struct(module.__struct__())
 
             struct_params =
